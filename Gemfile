@@ -30,6 +30,8 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '~> 0.9'
   gem 'libnotify', '0.5.9'
+  gem 'factory_girl_rails', '4.1.0'
+
 end
 
 group :production do
