@@ -6,7 +6,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'haml-rails', '>= 0.3.4', :group => :development
+gem 'haml-rails', '>= 0.3.4'
 gem "erb2haml", :group => :development
 gem 'html2haml', :group => :development
 

@@ -7,16 +7,16 @@ describe "Static pages" do
   describe "Home page" do
     before { visit root_path }
 
-    it { should have_selector('h1',    text: 'Sample App') }
+    it { should have_selector('h1',    text: 'Welcome!') }
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector 'title', text: '| Home' }
   end
 
-  describe "Help page" do
-    before { visit help_path }
+  describe "Links page" do
+    before { visit links_path }
 
-    it { should have_selector('h1',    text: 'Help') }
-    it { should have_selector('title', text: full_title('Help')) }
+    it { should have_selector('h1',    text: 'Links') }
+    it { should have_selector('title', text: full_title('Links')) }
   end
 
   describe "About page" do
