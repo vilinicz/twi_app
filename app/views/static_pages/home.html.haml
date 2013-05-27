@@ -1,7 +1,21 @@
-.center.hero-unit
-  %h1 Welcome!
-  %h2
-    This is
-    %a{:href => "http://www.rubyonrails.ru/"} RoR
-    based application.
-  = link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"
+- if signed_in?
+  .row
+    %aside.span4
+      %section
+        = render 'shared/user_info'
+      %section
+        = render 'shared/micropost_form'
+    .span8
+      %h3 Micropost Feed
+      = render 'shared/feed'
+- else
+  .center.hero-unit
+    %h1 Welcome!
+    %h2
+      This is
+      %a{:href => "http://www.rubyonrails.ru/"} RoR
+      based application.
+    = link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"     
+
+
+
