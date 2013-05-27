@@ -10,6 +10,7 @@ gem 'haml-rails', '>= 0.3.4'
 gem "erb2haml", :group => :development
 gem 'html2haml', :group => :development
 
+
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'

@@ -19,6 +19,8 @@ class MicropostsController < ApplicationController
 		redirect_to root_url
 	end
 
+	
+
 	private
 
 	  def correct_user
