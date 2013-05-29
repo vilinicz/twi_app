@@ -3,8 +3,11 @@
   %aside.span4
     %section
       %h1
-        = gravatar_for @user
+        = gravatar_for @user, size: 150
         = @user.name
+      %span
+        - if @user==current_user
+          = link_to "update", edit_user_path(current_user)
     %section
       = render 'shared/stats'
   .span8
