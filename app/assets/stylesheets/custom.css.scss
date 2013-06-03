@@ -1,3 +1,13 @@
+/*
+$navbarBackground:                #c79810 ;
+$navbarBackgroundHighlight:       #eab92d ;
+$navbarText:                      #f9ed9d ;
+$navbarLinkColor:                 #f9ed9d ;
+$navbarSearchPlaceholderColor:    #EEC844 ;
+*/
+
+
+
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -72,18 +82,22 @@ p {
 
 /* header */
 
+
+
+
 #logo {
   float: left;
   margin-right: 10px;
+  margin-left: 10px;
   font-size: 1.8em;
   color: 0117AH;
   text-transform: uppercase;
   letter-spacing: -0.7px;
-  padding-top: 9px;
+  padding-top: 11px;
   font-family: Purisa, Comic Sans Ms;
   line-height: 1;
   &:hover {
-    color: white;
+    color: red;
     text-decoration: none;
   }
 }
@@ -133,9 +147,14 @@ aside {
   section {
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
+    background-color: #fafafa;
     &:first-child {
       border: 0;
       padding-top: 0;
+      border-top-right-radius: 50px;
+    }
+    &:last-child {
+      background-color: white;
     }
     span{
       display: block;
@@ -244,7 +263,23 @@ input {
 
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    /*border-top: 1px solid #e8e8e8;*/
+    border-bottom: 1px solid #e8e8e8;
+    /*border-left: 1px solid #e8e8e8;*/
+    
+
+    
+    &:hover {
+      text-decoration: none;
+      background-color: #fafafa;
+      border-bottom: 7px solid #dadada;
+      border-radius: 10px;
+
+      
+
+      /*border-color: #aaaaaa;*/
+      
+    }
   }
 }
 .content {
@@ -260,7 +295,7 @@ input {
 aside {
   textarea {
     height: 100px;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
   }
 }
 

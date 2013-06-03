@@ -1,13 +1,16 @@
-%header.navbar.navbar-fixed-top.navbar-inverse
+%header.navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to "Twirr", root_path, id: "logo"
+      = link_to "twirr", root_path, id: "logo"
       %nav
         %ul.nav.pull-right
           %li= link_to "Home", root_path
+          %li.divider-vertical
           %li= link_to "Links", links_path
+          %li.divider-vertical
           - if signed_in?
             %li= link_to "Users", users_path
+            %li.divider-vertical
             %li#fat-menu.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 Account
