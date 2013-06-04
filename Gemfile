@@ -9,8 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'haml-rails', '>= 0.3.4'
 gem "erb2haml", :group => :development
 gem 'html2haml', :group => :development
-gem 'mysql2', '~> 0.3.12b5'
-gem 'thinking-sphinx', '~> 3.0.2'
+
 
 
 
