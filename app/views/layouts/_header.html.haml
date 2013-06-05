@@ -3,6 +3,8 @@
     .container
       = link_to "twirr", root_path, id: "logo"
       %nav
+        = form_tag quests_path, :method => 'get', :action => 'quests', class: 'navbar-search pull-left' do
+          = text_field_tag :search_text, params[:search_text], class: 'search-query'
         %ul.nav.pull-right
           %li= link_to "Home", root_path
           %li.divider-vertical

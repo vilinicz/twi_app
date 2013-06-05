@@ -257,16 +257,17 @@ input {
 
 /* microposts */
 
+
 .microposts {
   list-style: none;
   margin: 10px 0 0 0;
+
 
   li {
     padding: 10px 0;
     /*border-top: 1px solid #e8e8e8;*/
     border-bottom: 1px solid #e8e8e8;
     /*border-left: 1px solid #e8e8e8;*/
-    
 
     
     &:hover {
@@ -274,16 +275,15 @@ input {
       background-color: #fafafa;
       border-bottom: 7px solid #dadada;
       border-radius: 10px;
-
-      
-
       /*border-color: #aaaaaa;*/
-      
     }
   }
 }
 .content {
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
 }
 .timestamp {
   color: $grayLight;
