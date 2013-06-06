@@ -1,0 +1,6 @@
+- provide(:title, "Search")
+%h1 Search Results: #{@quests.count}
+/= will_paginate
+%ul.users
+  = render @quests
+/= will_paginate

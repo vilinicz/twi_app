@@ -3,7 +3,7 @@ class Micropost < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :content, presence: true, length: { maximum: 140 }
+  validates :content, presence: true, length: { maximum: 400 }
   validates :user_id, presence: true
 
   default_scope order: 'microposts.created_at DESC'
@@ -13,5 +13,13 @@ class Micropost < ActiveRecord::Base
                          WHERE follower_id = :user_id"
     where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
           user_id: user.id)
+  end
+
+  def self.text_search(search)
+    if search
+      find(:all, :conditions => ['content LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
   end
 end
