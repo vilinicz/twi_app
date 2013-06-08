@@ -266,19 +266,19 @@ input {
     /*border-top: 1px solid #e8e8e8;*/
     border-bottom: 1px solid #e8e8e8;
 
-    &:hover {
+    /*&:hover {
       text-decoration: none;
       background-color: #fafafa;
       border-bottom: 7px solid #dadada;
-      border-radius: 10px;
-    }
+      border-radius: 10px;*/
+    
   }
 }
 .content {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
+  /*-o-text-overflow: ellipsis;*/
 }
 .timestamp {
   color: $grayLight;
