@@ -17,7 +17,7 @@ class Micropost < ActiveRecord::Base
 
   def self.text_search(search)
     if search
-      find(:all, :conditions => ['content LIKE ?', "%#{search}%"])
+      find(:all, :conditions => ['content LIKE ?', "%#{search.downcase}%"])
     else
       find(:all)
     end

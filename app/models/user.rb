@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
 
   def self.text_search(search)
     if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      find(:all, :conditions => ['name LIKE ?', "%#{search.downcase}%"])
     else
       find(:all)
     end
