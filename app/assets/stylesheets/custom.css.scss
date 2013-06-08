@@ -194,12 +194,12 @@ aside {
     margin: 1px 1px;
   }
 }
-/*.span8 {
+.span8 {
   width: 500px;
   margin-left: 30px;
   margin-right: 80px;
 }
-*/
+
 
 /* forms */
 
@@ -254,11 +254,11 @@ input {
     /*border-top: 1px solid #e8e8e8;*/
     border-bottom: 1px solid #e8e8e8;
 
-    /*&:hover {
+    &:hover {
       text-decoration: none;
       background-color: #fafafa;
       border-bottom: 7px solid #dadada;
-      border-radius: 10px;*/
+      border-radius: 10px;
     
   }
 }
@@ -266,7 +266,7 @@ input {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  /*-o-text-overflow: ellipsis;*/
+  -o-text-overflow: ellipsis;
 }
 .timestamp {
   color: $grayLight;
