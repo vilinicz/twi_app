@@ -2,8 +2,13 @@
 .row
   %aside.span4
     %section
-      = gravatar_for @user, size: 150
-      %h1= @user.name
+      %h1
+        - if @user.avatar?
+          .page_avatar
+            = image_tag @user.avatar.url(:medium), class: "gravatar"
+        - else
+          = gravatar_for @user, size: 150
+        = @user.name
       %span
         - if @user == current_user
           = link_to "my profile", current_user
@@ -19,7 +24,10 @@
       - if @users.any?
         .user_avatars
           - @users.each do |user|
-            = link_to gravatar_for(user, size: 30), user
+            - if user.avatar?
+              = link_to( (image_tag user.avatar.url(:mini), class: "gravatar"), user)
+            - else
+              = link_to gravatar_for(user, size: 30), user
   .span8
     - if @users.any?
       %h3= @title

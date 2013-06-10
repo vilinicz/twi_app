@@ -2,8 +2,12 @@
 .row
   %aside.span4
     %section
+      
       %h1
-        = gravatar_for @user, size: 150
+        - if @user.avatar?
+          = image_tag @user.avatar.url(:medium), class: "gravatar"
+        - else
+          = gravatar_for @user, size: 150
         = @user.name
       %span
         - if @user==current_user

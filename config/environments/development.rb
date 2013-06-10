@@ -34,4 +34,8 @@ TwiApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #for image-loading
+  Paperclip.options[:command_path] = "/usr/bin/convert"
+
 end

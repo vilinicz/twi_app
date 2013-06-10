@@ -5,4 +5,6 @@
     = form_for(@user) do |f|
       = render 'shared/error_messages', object: f.object
       = render 'fields', f: f
-      = f.submit "Create!", class: "btn btn-large btn-primary"
+      = f.label :avatar, "Quadratic Photo (Gravatar will be auto used instead ;)"
+      = f.file_field :avatar, class: "btn btn-mini btn-block btn-inverse disabled"
+      = f.submit "Create!", class: "btn btn-inverse btn-large pull-right"

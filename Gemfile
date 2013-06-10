@@ -7,10 +7,13 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'haml-rails', '>= 0.3.4'
+#convert erb to haml
 gem "erb2haml", :group => :development
 gem 'html2haml', :group => :development
+#DB
 gem 'pg', '0.12.2'
-
+#image load
+gem 'paperclip', "~> 3.0"
 
 
 
@@ -44,6 +47,7 @@ group :test do
 
 end
 
+#for Heroku
 group :production do
   gem 'pg', '0.12.2'
 end
