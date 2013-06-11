@@ -1,9 +1,6 @@
 $dropdownLinkBackgroundHover: #9d261d;
 @import "bootstrap";
 
-@import url(http://fonts.googleapis.com/css?family=Patrick+Hand+SC);
-/* mixins, variables, etc. */
-
 
 $grayMediumLight: #eaeaea;
 
@@ -51,6 +48,9 @@ textarea {
 
 
 /* typography */
+.users li a {
+  font-size: 14pt;
+}
 
 .span6 .btn-mini {
   font-size: 8pt;
