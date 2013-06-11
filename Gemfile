@@ -14,6 +14,8 @@ gem 'html2haml', :group => :development
 gem 'pg', '0.12.2'
 #image load
 gem 'paperclip', "~> 3.0"
+#Unicorn app-server
+gem 'unicorn'
 
 
 
