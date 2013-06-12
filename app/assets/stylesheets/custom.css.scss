@@ -1,8 +1,15 @@
-$dropdownLinkBackgroundHover: #9d261d;
+
+
+
+$dropdownLinkBackgroundHover: #7a43b6;
+$inputBorderRadius: 50px;
+$heroUnitBackground: #f0f0f0;
+
 
 @import "bootstrap";
 
 $grayMediumLight: #eaeaea;
+
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -11,6 +18,41 @@ $grayMediumLight: #eaeaea;
 }
 
 /* universal */
+
+input[type=text], textarea {
+  @include transition(all 0.30s ease-in-out);
+  /*outline: none;*/
+  /*padding: 3px 0px 3px 3px;*/
+  /*margin: 5px 1px 3px 0px;*/
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  @include box-shadow(0 0 5px rgba(122, 67, 182, 1));
+  /*padding: 3px 0px 3px 3px;*/
+  /*margin: 5px 1px 3px 0px;*/
+  border: 1px solid rgba(122, 67, 182, 1);
+}
+
+input[type=password], textarea {
+  @include transition(all 0.30s ease-in-out);
+  /*outline: none;*/
+  /*padding: 3px 0px 3px 3px;*/
+  /*margin: 5px 1px 3px 0px;*/
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=password]:focus, textarea:focus {
+  @include box-shadow(0 0 5px rgba(122, 67, 182, 1));
+  /*padding: 3px 0px 3px 3px;*/
+  /*margin: 5px 1px 3px 0px;*/
+  border: 1px solid rgba(122, 67, 182, 1);
+}
+
+::selection {
+    background: #7a43b6;
+    color: #FFFfff;
+}
 
 
 html {
@@ -48,6 +90,7 @@ textarea {
 
 
 /* typography */
+
 .users li a {
   font-size: 14pt;
 }
@@ -61,7 +104,7 @@ textarea {
   font-family: 'Patrick Hand SC';
   font-size: 1em;
   text-transform: uppercase;
-  color: $red;
+  color: $purple;
 }
 
 .dropdown-menu {
@@ -75,9 +118,16 @@ textarea {
 .btn{
   font-family: 'Patrick Hand SC';
   font-size: 14pt;
+  border-radius: 10pt;
 }
-.hero-unit h1{
+.btn-inverse{
+  border-radius: 50pt;
+}
+.hero-unit {
+  border-radius: 220px;
+  h1 {
    font-size: 90px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -122,10 +172,11 @@ p {
   line-height: 1;
   font-weight: bold;
   &:hover {
-    color: $red;
+    color: $purple;
     text-decoration: none;
   }
 }
+
 
 /* footer */
 
@@ -137,7 +188,7 @@ footer {
   a {
     color: $gray;
     &:hover {
-      color: $red;
+      color: $purple;
     }
   }
   small {
@@ -154,11 +205,17 @@ footer {
 }
 
   a{
-    color: $red;
+    color: $purple;
       &:hover {
         color: $gray;
       }
   }
+
+/*Links*/
+.links {
+    font-size: 14pt;
+}
+
 
 /* miscellaneous */
 
@@ -235,8 +292,8 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: $red;
-    }
+      color: $purple;
+    }  
   }
   strong {
     display: block;

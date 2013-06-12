@@ -1,5 +1,5 @@
 $(document).ready ->
-	$("div.hideWrap a.hideBtn").click ->
+	$("div.hideWrap a.hideBtn").hover ->
 		$(this).toggleClass("show").siblings("div.hideCont").slideToggle "noormal"
 		false
 	

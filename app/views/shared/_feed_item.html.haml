@@ -7,14 +7,15 @@
   %span.user
     = link_to feed_item.user.name, feed_item.user
   %span.content
-    -if feed_item.content.length > 0
+    -if feed_item.content.length > 70
       .hideWrap
-        %a.hideBtn{:href => "#", :title => 'show'}
+        %a.hideBtn{:href => "#"}
           = first_three(feed_item.content)
         .hideCont{:style => "display:none;"}
           = wrap feed_item.content
     -else
-      = wrap feed_item.content
+      = wrap feed_item.content 
+      %br
     %span.timestamp
       Posted #{time_ago_in_words(feed_item.created_at)} ago.
     - if current_user?(feed_item.user)

@@ -18,7 +18,7 @@
     = render 'follow_form' if signed_in?
     - if @user.microposts.any?
       %h3
-        Microposts (#{@user.microposts.count})
+        #{@user.microposts.count} posts
       %ol.microposts
         = render @microposts
       = will_paginate @microposts

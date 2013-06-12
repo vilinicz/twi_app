@@ -6,7 +6,7 @@ module MicropostsHelper
 
   def first_three(post)
     arr = post.split(' ')
-    "#{arr[0...6].join(' ')}..."
+    "#{arr[0...4].join(' ')}..."
   end
 
 
