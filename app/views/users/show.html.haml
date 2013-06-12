@@ -17,7 +17,7 @@
   .span8
     = render 'follow_form' if signed_in?
     - if @user.microposts.any?
-      %h3
+      %h3#posts_count
         #{@user.microposts.count} posts
       %ol.microposts
         = render @microposts

@@ -1,5 +1,9 @@
-= form_for(@micropost) do |f|
-  = render 'shared/error_messages', object: f.object
-  .field
-    = f.text_area :content, placeholder: "Compose new micropost..."
-  = f.submit "Post", class: "btn btn-large"
+.compose-post-form
+  = form_for(@micropost) do |f|
+    = render 'shared/error_messages', object: f.object
+    .field
+      = f.text_area :content, placeholder: "Compose new post...and add an image ↓ ٩(●̮̮̃●̃)۶"
+    .image-form
+      = f.file_field :image, title: "add image to your post"
+
+    = f.submit "Post", class: "btn btn-large btn-success"

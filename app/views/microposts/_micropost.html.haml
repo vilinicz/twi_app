@@ -1,11 +1,12 @@
 %li
   %span.content
     = wrap micropost.content
+    - if micropost.image?
+      .micropost_image
+        = image_tag micropost.image.url(:medium)
   %span.timestamp
     Posted #{time_ago_in_words(micropost.created_at)} ago.
     By #{link_to micropost.user.name, micropost.user}
   - if current_user?(micropost.user)
     | 
-    = link_to "delete", micropost, method: :delete, | 
-      data: { confirm: "You sure?" },               |
-      title: micropost.content                      |
+    = link_to "delete", micropost, confirm: 'Are you sure?', method: :delete, remote: true, :class => 'delete_post', title: micropost.content    

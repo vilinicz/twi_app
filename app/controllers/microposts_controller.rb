@@ -4,19 +4,27 @@ class MicropostsController < ApplicationController
 
 	def create
 		@micropost = current_user.microposts.build(params[:micropost])
-		if @micropost.save
-			flash[:success] = "Your post created!"
-			redirect_to root_url
-		else
+		respond_to do |format|
+		  if @micropost.save
+		  	flash[:success] = "Post created!"
+			format.html {redirect_to root_url}
+			format.js   
+		  else
 			@feed_items = []
-			render 'static_pages/home'
-		end
+			format.html {render 'static_pages/home'}
+			format.js   
+		  end
+	   end
 	end
 
-
 	def destroy
+		@micropost = Micropost.find(params[:id])
 		@micropost.destroy
-		redirect_to root_url
+        respond_to do |format|
+        format.html { redirect_to root_url }
+        format.json { head :no_content }
+        format.js   { render :nothing => true }
+      end
 	end
 
 	
