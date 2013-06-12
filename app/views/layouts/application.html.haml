@@ -2,15 +2,9 @@
 %html
   %head
     %title= full_title(yield(:title))
-    %script{:src => "//ajax.googleapis.com/ajax/libs/webfont/1.4.2/webfont.js"}
-    :javascript
-      WebFont.load({
-        google: {
-          families: ['Patrick Hand SC']
-        }
-      });
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
+    = google_webfonts_init({google: ['Patrick Hand SC']})
     = csrf_meta_tags
     = render 'layouts/shim'
   %body

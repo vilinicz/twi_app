@@ -16,7 +16,8 @@ gem 'pg', '0.12.2'
 gem 'paperclip', "~> 3.0"
 #Unicorn app-server
 gem 'unicorn'
-
+#Google-fonts
+gem 'google-webfonts-rails'
 
 
 group :development, :test do
