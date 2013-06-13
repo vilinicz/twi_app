@@ -1,7 +1,7 @@
 %header.navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to "twirr", root_path, id: "logo"
+      = link_to "SR", root_path, id: "logo"
       %nav
         = form_tag quests_path, :method => 'get', :action => 'quests', class: 'navbar-search pull-right' do
           = text_field_tag :search_text, params[:search_text], class: 'search-query'

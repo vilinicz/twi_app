@@ -6,7 +6,6 @@ class MicropostsController < ApplicationController
 		@micropost = current_user.microposts.build(params[:micropost])
 		respond_to do |format|
 		  if @micropost.save
-		  	flash[:success] = "Post created!"
 			format.html {redirect_to root_url}
 			format.js   
 		  else

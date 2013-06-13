@@ -1,6 +1,6 @@
 $(document).ready ->
 	$("div.hideWrap a.hideBtn").click ->
-		$(this).toggleClass("show").siblings("div.hideCont").slideToggle "noormal"
+		$(this).toggleClass("show").siblings("div.hideCont").slideToggle "slow"
 		false
 	
 $(document).ready( ->
@@ -8,3 +8,7 @@ $(document).ready( ->
     $(this).closest('li').fadeOut();
   );
 );
+
+$(document).ready ->
+  $(".block").hover ->
+    $(this).toggleClass "highlighted"

@@ -12,13 +12,15 @@
       = render 'shared/feed'
 - else
   .center.hero-unit
-    %h1 Welcome!
+    %h1 Hello
     %h2
-      This is
-      %a{:href => "http://www.rubyonrails.ru/"} RoR
+      You are on a
+      %a{:href => "http://www.rubyonrails.ru/", target:"_blank"} RoR
       based application made by Vincent Ilinicz 
       %br for education and elaboration.
-    = link_to "Sign up now!", signup_path, class: "btn btn-large btn-success"     
+    %h2
+      Vizit 'About'-page for more info.
+    = link_to "Sign up", signup_path, class: "btn btn-large btn-inverse"     
 
 
 
