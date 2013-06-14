@@ -6,6 +6,7 @@ class MicropostsController < ApplicationController
 		@micropost = current_user.microposts.build(params[:micropost])
 		respond_to do |format|
 		  if @micropost.save
+		  	@feed_items = current_user.feed.paginate(page: params[:page])
 			format.html {redirect_to root_url}
 			format.js   
 		  else
@@ -22,7 +23,7 @@ class MicropostsController < ApplicationController
         respond_to do |format|
         format.html { redirect_to root_url }
         format.json { head :no_content }
-        format.js   { render :nothing => true }
+        format.js   #{ render :nothing => true }
       end
 	end
 

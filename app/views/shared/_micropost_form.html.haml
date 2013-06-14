@@ -1,9 +1,9 @@
 .compose-post-form
-  = form_for(@micropost) do |f|
+  = form_for(@micropost, remote: true, :html => {multipart: true}) do |f|
     = render 'shared/error_messages', object: f.object
     .field
       = f.text_area :content, placeholder: "Compose new post...and add an image  ↓"
     .image-form
       = f.file_field :image, title: "add image to your post"
 
-    = f.submit "Post", class: "btn btn-large btn-inverse"
+    = f.submit "Post", :disable_with => "Load", class: "btn btn-large btn-inverse"

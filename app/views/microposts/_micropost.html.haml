@@ -9,4 +9,4 @@
     By #{link_to micropost.user.name, micropost.user}
   - if current_user?(micropost.user)
     | 
-    = link_to "delete", micropost, confirm: 'Are you sure?', method: :delete, remote: true, :class => 'delete_post', title: micropost.content    
+    = link_to "delete", micropost, method: :delete, remote: true, :class => 'delete_post', title: micropost.content    

@@ -141,10 +141,6 @@ textarea {
   border-radius: 15px;
 }
 
-.btn-success {
-  background-color: $red;
-}
-
 .hero-unit {
   background-color: rgba(0,0,0,0.7);
   border-radius: 220px;
@@ -189,10 +185,12 @@ h2 {
 }
 
 p {
-  font-size: 14em;
+  font-size: 12pt;
   line-height: 1.7em;
   font-family: 'Titillium Web';
+  color: $grayLight;
 }
+
 
 /* header */
 

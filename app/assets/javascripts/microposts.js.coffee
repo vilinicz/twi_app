@@ -1,14 +1,13 @@
 $(document).ready ->
-	$("div.hideWrap a.hideBtn").click ->
-		$(this).toggleClass("show").siblings("div.hideCont").slideToggle "slow"
-		false
-	
-$(document).ready( ->
-  $('.delete_post').bind('ajax:success', ->
-    $(this).closest('li').fadeOut();
-  );
-);
+	$("body").on('click', "div.hideWrap a.hideBtn", ->
+		$(this).toggleClass("show").siblings("div.hideCont").slideToggle "slow" 
+		false )
 
 $(document).ready ->
-  $(".block").hover ->
-    $(this).toggleClass "highlighted"
+	$("body").on('ajax:success', '.delete_post', ->
+    	$(this).closest('li').fadeOut() )
+ 
+
+$(document).ready ->
+  	$("body").on('hover', '.block', ->
+    	$(this).toggleClass "highlighted" )
