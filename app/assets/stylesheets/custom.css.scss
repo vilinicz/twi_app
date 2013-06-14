@@ -68,6 +68,10 @@ body {
   background: url(kveikur.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center-bottom;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   font-family: 'Titillium Web';
 }
 
