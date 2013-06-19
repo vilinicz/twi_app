@@ -7,6 +7,6 @@
       = render 'fields', f: f
       = f.label :avatar, "New photo?"
       = f.file_field :avatar, class: "btn btn-mini btn-inverse disabled"
-      = f.submit "Save!", class: "btn btn-large btn-inverse pull-right"
+      = f.submit "Save!", :disable_with => "Saving", class: "btn btn-large btn-inverse pull-right"
     = gravatar_for @user
     %a{:href => "http://gravatar.com/emails", :target => "_blank"} gravatar

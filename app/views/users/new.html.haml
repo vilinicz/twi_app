@@ -7,4 +7,4 @@
       = render 'fields', f: f
       = f.label :avatar, "Quadratic Photo (Gravatar will be auto used instead ;)"
       = f.file_field :avatar, class: "btn btn-mini btn-inverse disabled"
-      = f.submit "Create!", class: "btn btn-inverse btn-large pull-right"
+      = f.submit "Create!", :disable_with => "Creating", class: "btn btn-inverse btn-large pull-right"

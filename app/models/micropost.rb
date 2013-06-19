@@ -1,8 +1,9 @@
 class Micropost < ActiveRecord::Base
   attr_accessible :content, :image
-  has_attached_file :image, :styles => { :medium => "700x250>" }
   belongs_to :user
 
+  has_attached_file :image, :styles => { :medium => "700x250>" }
+  validates_attachment_content_type :image, :content_type=>['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
   validates :content, presence: true, length: { maximum: 254 }
   validates :user_id, presence: true
 

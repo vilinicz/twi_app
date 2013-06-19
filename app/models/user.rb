@@ -12,12 +12,15 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :avatar, :email, :password, :password_confirmation
   has_secure_password
-  has_attached_file :avatar, :styles => { :medium => "150x150>", :thumb => "54x54", :mini => "30x30" }
+
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
   has_many :reverse_relationships, foreign_key: "followed_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :reverse_relationships
+
+  has_attached_file :avatar, :styles => { :medium => "150x150>", :thumb => "54x54", :mini => "30x30" }
+  validates_attachment_content_type :avatar, :content_type=>['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
   
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
