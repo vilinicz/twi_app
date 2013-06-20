@@ -1,5 +1,5 @@
 $navbarBackground:                rgba(0,0,0,0) ;
-$navbarBackgroundHighlight:       rgba(0,0,0,0.4) ;
+$navbarBackgroundHighlight:       rgba(0,0,0,0.5) ;
 $navbarLinkColor:                 #999;
 $navbarHeight:                    60px;               
 $dropdownLinkBackgroundHover:     rgba(122, 67, 182, 0.2);
@@ -122,7 +122,7 @@ textarea {
 
 .dropdown-menu {
   font-size: 90%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.5);
   li a {
   color: #999;
   }
@@ -410,9 +410,9 @@ input[type=password]{
   li {
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solid $grayMediumLight;
+    border-top: 1px solid #999;
     &:last-child {
-      border-bottom: 1px solid $grayMediumLight;
+      border-bottom: 1px solid #999;
     }
   }
 }
