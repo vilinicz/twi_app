@@ -19,7 +19,10 @@ class User < ActiveRecord::Base
   has_many :reverse_relationships, foreign_key: "followed_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :reverse_relationships
 
-  has_attached_file :avatar, :styles => { :medium => "150x150>", :thumb => "54x54", :mini => "30x30" }
+  has_attached_file :avatar, 
+                    :styles => { :medium => "150x150>", :thumb => "54x54", :mini => "30x30" },
+                    :url  => "/assets/avatars/:id/:style/:basename.:extension",
+                    :path => ":rails_root/public/assets/avatars/:id/:style/:basename.:extension"
   validates_attachment_content_type :avatar, :content_type=>['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
   
   before_save { |user| user.email = email.downcase }
