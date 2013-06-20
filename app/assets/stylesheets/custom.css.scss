@@ -1,6 +1,7 @@
 $navbarBackground:                rgba(0,0,0,0) ;
 $navbarBackgroundHighlight:       rgba(0,0,0,0.4) ;
-$navbarLinkColor:                 #888888;               
+$navbarLinkColor:                 #999;
+$navbarHeight:                    60px;               
 $dropdownLinkBackgroundHover:     rgba(122, 67, 182, 0.2);
 $inputBorderRadius:               50px;
 $heroUnitBackground:              #f0f0f0;
@@ -120,16 +121,16 @@ textarea {
 }
 
 .dropdown-menu {
-  font-size: 12pt;
+  font-size: 90%;
   background-color: rgba(0,0,0,0.7);
-   li{
-    color: $grayLighter;
+  li a {
+  color: #999;
   }
-
    .divider{
     background-color: $grayDarker;
    }
 }
+
 
 .navbar .nav > li > a {
   font-size: 12pt;
@@ -206,7 +207,7 @@ p {
   color: $black;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-top: 5px;
+  padding-top: 13px;
   padding-left: 45px;
   font-family: 'Titillium Web';
   line-height: 1;
