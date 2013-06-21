@@ -1,8 +1,10 @@
-%li
+.box.col2
   - if user.avatar?
-    = image_tag user.avatar.url(:thumb), class: "gravatar"
+    = link_to( (image_tag user.avatar.url(:medium)), user, title: user.name, class: "gravatar")
   - else
-    = gravatar_for user, size: 52
+    = link_to( (gravatar_for user, size: 150), user, title: user.name)
+  %br
   = link_to user.name, user
+  %br
   - if current_user.admin? && !current_user?(user)
-    | #{link_to "delete", user, method: :delete, data: { confirm: "You sure?" }}
+    #{link_to "delete", user, method: :delete, data: { confirm: "You sure?" }}

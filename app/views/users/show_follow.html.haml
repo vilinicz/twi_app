@@ -25,13 +25,13 @@
         .user_avatars
           - @users.each do |user|
             - if user.avatar?
-              = link_to( (image_tag user.avatar.url(:mini), class: "gravatar"), user)
+              = link_to( (image_tag user.avatar.url(:mini), title: user.name, class: "gravatar"), user)
             - else
-              = link_to gravatar_for(user, size: 30), user
+              = link_to gravatar_for(user, size: 30), user, title: user.name
   .span8
     - if @users.any?
       %h3= @title
     - if @users.any?
-      %ul.users
+      .users
         = render @users
       = will_paginate @users

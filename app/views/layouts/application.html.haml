@@ -2,9 +2,10 @@
 %html
   %head
     %title= full_title(yield(:title))
+    = google_webfonts_init({google: ['Titillium Web']})
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
-    = google_webfonts_init({google: ['Titillium Web']})
+    = javascript_include_tag "jquery.masonry.min.js"
     = csrf_meta_tags
     = render 'layouts/shim'
   %body
