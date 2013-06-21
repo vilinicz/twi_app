@@ -20,6 +20,7 @@ gem 'unicorn'
 #Google-fonts
 gem 'google-webfonts-rails'
 
+gem 'remotipart', '~> 1.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
