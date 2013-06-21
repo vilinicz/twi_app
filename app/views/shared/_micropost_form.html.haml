@@ -4,6 +4,6 @@
     .field
       = f.text_area :content, placeholder: "Compose new post...and add an image  ↓"
     .image-form
-      = f.file_field :image, title: "add image to your post"
+      = f.file_field :image, remote: true, title: "add image to your post"
 
     = f.submit "Post", :disable_with => "Load", class: "btn btn-large btn-inverse"

@@ -1,14 +1,33 @@
 - provide(:title, 'About Us')
 %h1 About
 %p.desc
-  Hi! My name's Vincent. And it is my first training app. It's first, but not goofy:
-  %br/
-  you can register here with your (nick)name, email/password,
-  log in/out, edit your page, post messages.
-  Also, you can use your Gravatar as avatar.
-  %br/
-  All users are protected with security tokens (As their cookies too!).
-  %br/
-  At the Links page you can find different literature. I believe it can be so helpfull for u as it was for me.
-  %br/
-  \:)
+  Hi. This app was made for training and portfolio. Twitter was used as an example.
+  Bit info for vizitors and developers:
+  %ul
+    %li.links 
+      Registered user has own home-page(root_url) with:
+      %ul
+        %li.links Gravatar as avatar, or user's photo, if user loaded it.
+        %li.links Statistics of followers/following users.
+        %li.links Field for writing new post. If post has no image - it will be loaded with AJAX. 
+        %li.links FEED with posts of followed users. User can delete(with AJAX) his posts.
+
+    %li.links User has profile-page, where he can find only his own posts. 
+  
+    %li.links User has edit-page, to update password/name/avatar/email.
+  
+    %li.links User can find other users at the users-page - then follow/unfollow them. 
+  
+    %li.links AdminUser (Vincent Ilinicz) - can delete other users.
+  
+
+%p.desc
+  App uses Bcrypt-Ruby for protect passwords. And protected sessions/cookies for every user. 
+  Bootstrap for style, Postgres as database.
+  %br
+
+  Page Media - is under developing now )
+  %br
+
+  Thanks for visiting %)
+
