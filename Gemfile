@@ -11,7 +11,7 @@ gem 'haml-rails', '>= 0.3.4'
 gem "erb2haml", :group => :development
 gem 'html2haml', :group => :development
 #DB
-gem 'pg', '0.12.2'
+gem 'sqlite3'
 #image load
 gem 'paperclip', "~> 3.0"
 gem 'aws-sdk'
@@ -22,7 +22,7 @@ gem 'google-webfonts-rails'
 
 
 group :development, :test do
-  gem 'sqlite3', '1.3.5'
+  gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'
@@ -53,5 +53,6 @@ end
 
 #for Heroku
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg'
+  gem 'rails_12factor'
 end
